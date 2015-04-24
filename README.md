@@ -3,7 +3,7 @@
 
 ## My Config
 
-- wkhtmltopdf 0.12.2.1 (with patched qt) on 
+- wkhtmltopdf 0.12.2.1 (with patched qt)
 - Macos 10.10.2
 
 ## How to reproduce the issue ?
