@@ -9,8 +9,8 @@
 ## How to reproduce the issue ?
 
 - You need node installed (or any http serveur)
-- git clone git@github.com:laguiz/wkhtmltopdf-issue-traceur.git
-- cd wkhtmltopdf-issue-traceur
+- `git clone git@github.com:laguiz/wkhtmltopdf-issue-traceur.git`
+- `cd wkhtmltopdf-issue-traceur`
 - (with node) `http-server` in root folder
 - Go to http://127.0.0.1:8080/ and make sure you see `Static message` AND `Hello, world!`
 - Produce the issue : `wkhtmltopdf --javascript-delay 2000 --debug-javascript http://127.0.0.1:8080/ resultko.pdf`
@@ -32,7 +32,7 @@ Done
 
 ## In real world case
 
-In my real world case I observed similar issue and I suspect some polyfill missing but as indicated in https://github.com/wkhtmltopdf/wkhtmltopdf/issues/2225 we cannot get more informations for now.
+In my real world case I observed similar issue and I suspect some polyfill missing but as indicated in https://github.com/wkhtmltopdf/wkhtmltopdf/issues/2225 we cannot get more information for now.
 
 Do you have any recommendation how we can investigate?
 
