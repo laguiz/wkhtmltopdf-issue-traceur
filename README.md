@@ -1,21 +1,23 @@
 
 # Illustration of wkhtmltopdf issue with google-traceur
 
-Config :
+## My Config
+
 - wkhtmltopdf 0.12.2.1 (with patched qt) on 
 - Macos 10.10.2
 
 ## How to reproduce the issue ?
 
-- git clone
+- You need node installed (or any http serveur)
+- git clone git@github.com:laguiz/wkhtmltopdf-issue-traceur.git
 - cd wkhtmltopdf-issue-traceur
-- (using node) http-server in root folder
-- Go to http://127.0.0.1:8080/ and make sure you see `Static message` and `Hello, world!`
-- Run in root folder of the project : `wkhtmltopdf --javascript-delay 2000 --debug-javascript http://127.0.0.1:8080/ resultko.pdf`
+- (with node) `http-server` in root folder
+- Go to http://127.0.0.1:8080/ and make sure you see `Static message` AND `Hello, world!`
+- Produce the issue : `wkhtmltopdf --javascript-delay 2000 --debug-javascript http://127.0.0.1:8080/ resultko.pdf`
 
 ## Result observed
 
-The `Hello, world!` message does not show and logs show this :
+The `Hello, world!` message does not show and logs display this :
 
 ```
 Loading pages (1/6)
@@ -27,6 +29,12 @@ Loading headers and footers (5/6)
 Printing pages (6/6)
 Done    
 ```
+
+## In real world case
+
+In my real world case I observed similar issue and I suspect some polyfill missing but as indicated in https://github.com/wkhtmltopdf/wkhtmltopdf/issues/2225 we cannot get more informations for now.
+
+Do you have any recommendation how we can investigate?
 
 ## Tested with 0.13 and it's ok
 
