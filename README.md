@@ -1,5 +1,5 @@
 
-# Illustration of wkhtmltopdf issue with google-traceur
+# Illustration of wkhtmltopdf issue with google/traceur-compiler
 
 ## My Config
 
@@ -13,7 +13,7 @@
 - `cd wkhtmltopdf-issue-traceur`
 - (with node) `http-server` in root folder
 - Go to http://127.0.0.1:8080/ and make sure you see `Static message` AND `Hello, world!`
-- Produce the issue : `wkhtmltopdf --javascript-delay 2000 --debug-javascript http://127.0.0.1:8080/ resultko.pdf`
+- Open new console and try to reproduce doing : `wkhtmltopdf --javascript-delay 2000 --debug-javascript http://127.0.0.1:8080/ resultko.pdf`
 
 ## Result observed
 
@@ -30,12 +30,6 @@ Printing pages (6/6)
 Done    
 ```
 
-## In real world case
-
-In my real world case I observed similar issue and I suspect some polyfill missing but as indicated in https://github.com/wkhtmltopdf/wkhtmltopdf/issues/2225 we cannot get more information for now.
-
-Do you have any recommendation how we can investigate?
-
 ## Tested with 0.13 and it's ok
 
 Tested on Windows 7 with this build http://downloads.sourceforge.net/wkhtmltopdf/wkhtmltox-0.13.0-alpha-7b36694_msvc2013-win64.exe and javscript works properly. Hower in my real case I got CSS and other issues probably due to the alpha version of the 0.13 branch.
@@ -48,8 +42,4 @@ Loading page (1/2)
 Printing pages (2/2)
 Done
 ```
-
-
-
-
 
